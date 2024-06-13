@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Video Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>GitHub Video Editor</h1>
+    <input type="file" id="videoFileInput" accept="video/mp4,video/x-matroska">
+    <button onclick="handleUpload()">Upload Video</button>
+    <video id="videoPlayer" controls></video>
+    <br>
+    <label for="trimStart">Trim Start (seconds):</label>
+    <input type="number" id="trimStart" value="0" min="0">
+    <br>
+    <label for="trimEnd">Trim End (seconds):</label>
+    <input type="number" id="trimEnd" value="10" min="0">
+    <br>
+    <input type="checkbox" id="removeSubtitles"> Remove Subtitles (MKV only)
+    <br>
+    <button onclick="handleTrim()">Trim Video</button>
+    <br>
+    <a id="downloadLink" href="#" download>Download Trimmed Video</a>
+    <script src="script.js"></script>
+</body>
+</html>
